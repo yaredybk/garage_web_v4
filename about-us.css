@@ -1,0 +1,42 @@
+.landing{
+    position: relative;
+    background-color: rgb(56, 56, 56);
+    background-blend-mode: darken;
+    /* background:; */
+    /* background-size: 50%, 50%; */
+    /* background-size: contain; */
+    /* background-attachment: fixed; */
+    /* background-position-x: 50vw, 0vw; */
+    /* background-position-y: 0,50%; */
+}
+.landing .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.landing .bg img.after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* bottom: 20%; */
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    background-color: red;
+}
+.landing .bg img.before {
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    background-color: red;
+}

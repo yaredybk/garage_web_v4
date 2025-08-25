@@ -1,0 +1,325 @@
+.skiptranslate {
+    display: none !important;
+}
+
+#google_translate_element {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+    padding-block: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206, 207, 203);
+
+    &>div {
+        display: inline-flex;
+    }
+}
+
+#google_translate_element .skiptranslate {
+    display: inline-flex !important;
+    gap: 1rem;
+    /* margin-inline: auto; */
+    width: fit-content;
+
+    select {
+        /* background-color: var(--bg-color); */
+        /* color: var(--text-color); */
+        border: 1px solid var(--color);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+/*  elements hidden md:flex items-center space-x-2 ml-auto pl-auto */
+.nav-wide a {
+    /* text-gray-300 hover:text-orange-400 transition-colors */
+    color: var(--text-color);
+    transition: color 0.3s ease;
+    border-right: #1a202c solid 2px;
+    padding-inline: 0.5rem;
+}
+
+.nav-wide a:hover {
+    color: var(--accent-color);
+}
+
+.garage_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color);
+    text-decoration: none;
+}
+
+.landing {
+    margin-inline: 0;
+    min-height: 100dvh;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: calc(100dvh - 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./assets/bg/bg-1.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: -1rem;
+    padding: 0;
+    /* margin-top: 4rem; */
+    position: sticky;
+    top: calc(0 - 100dvh);
+    /* overflow-x: hidden; */
+    z-index: 1;
+}
+
+
+.landing>h1 {
+    /* text-4xl font-bold text-center text-gray-800 */
+    color: var(--color);
+    font-weight: 700;
+    text-align: center;
+    color: var(--color);
+    background-color: hsla(165, 8%, 28%, 0.8);
+    backdrop-filter: blur(2px);
+    font-size: 2.25rem;
+    font-size: clamp(1.9rem, 3vw + 1rem, 3rem);
+    max-width: fit-content;
+    padding-inline: 1.5rem;
+    border-left: solid 4vw var(--color);
+}
+
+.landing>h2 {
+    /* text-4xl font-bold text-center text-gray-800 */
+    font-weight: 700;
+    text-align: center;
+    color: var(--color);
+    background-color: hsla(165, 8%, 28%, 0.8);
+    backdrop-filter: blur(2px);
+    font-size: 1.2rem;
+    /* font-size: clamp(1rem, 3vw + 1rem, 1.5rem); */
+    max-width: fit-content;
+    padding-inline: 1.5rem;
+    border-left: solid 2vw var(--color);
+}
+
+.landing p.title {
+    /* mt-4 text-center text-gray-600 */
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--text-color);
+    margin: 0;
+    margin-inline: auto;
+    padding: 1.5rem;
+    font-size: larger;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+    text-wrap: pretty;
+    filter: drop-shadow(0 2px 3px var(--color));
+}
+
+.landing .call-to-action {
+    margin-inline: auto;
+    /* top: calc(100% - 8rem); */
+    width: 100%;
+    /* transform: translateX(-50%); */
+    display: flex;
+    transform: translateY(-2rem);
+    gap: 4px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    position: sticky;
+    top: 100%;
+}
+
+.landing .call-to-action.move {
+    position: fixed;
+    top: 0;
+    transform: translateY(4.5rem);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 720px) {
+    .landing .call-to-action.move {
+        justify-content: flex-end;
+        /* padding-right: 1rem; */
+    }
+}
+
+/* slide in animation */
+@keyframes slide-in {
+    0% {
+        transform: translateY(3rem);
+        scale: 1 1.5;
+        opacity: 0.5;
+        scale: 1.05;
+    }
+
+    75% {
+        opacity: 0.6;
+        scale: 1 1.2;
+        transform: translateY(-0.8rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.landing .call-to-action a,
+.landing .call-to-action button {
+    animation: slide-in 0.5s ease-out forwards;
+    background-color: var(--color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* margin-inline: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(1px 5px 3px rgb(25, 65, 37));
+}
+
+.landing .call-to-action button {
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
+
+.landing .call-to-action a {
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    line-height: inherit;
+    padding-block: -0.2rem;
+}
+
+.landing .call-to-action *:hover {
+    background-color: darken(var(--accent-color), 5%);
+}
+
+.comp-1 {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* position: absolute; */
+    bottom: 5px;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    align-items: flex-start
+}
+
+.comp-1 img {
+    width: 50%;
+    /* max-width: 400px; */
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: scale-down;
+}
+
+.about {
+    position: relative;
+    /* background-color: var(--color); */
+
+}
+
+.about p {
+    /* position: absolute; */
+    margin-top: -2rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-inline: -5px;
+}
+
+.contact-us {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    background: linear-gradient(to bottom, var(--color-tr3), rgba(255, 255, 255, 0.8));
+    min-height: 40vh;
+    align-content: flex-start;
+}
+
+
+
+.contact-us fieldset {
+    flex-grow: 1;
+}
+
+footer .f_garage {
+    background-color: var(--color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+.grid-card-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+}
+
+.working-hours {
+    background-image: url('/assets/bg/working-hours-1.png');
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    background-color: var(--bg-color);
+    background-blend-mode: lighten;
+    /* background-color: red; */
+    padding-block: 2rem;
+    > b{
+        color: white;
+    }
+}
+
+.our-services {
+    background-color: var(--bg-color);
+    min-height: 50vh;
+    color: white;
+    padding-bottom: 3rem;
+}
+
+.our-services h1 {
+    color: limegreen;
+}
+
+.our-services>p {
+    color: lightgray;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.learn-more {
+    background-color: var(--color);
+    padding: 5px 15px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    /* space words apart */
+    letter-spacing: 0.08em;
+    float: inline-end;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

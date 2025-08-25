@@ -1,0 +1,105 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.services-grid.home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+
+  & * {
+    flex: 1 1 15rem;
+  }
+}
+
+.landing .service-description {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem;
+  backdrop-filter: blur(1px);
+}
+
+.service-card {
+  /* background: #fff; */
+  --h: 12rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  height: var(--h);
+}
+
+.home .service-card {
+  --h: 20rem;
+}
+
+.service-img {
+  height: 8rem;
+  height: calc(var(--h) - 4rem);
+  width: 100%;
+  /* width: 8rem; */
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 10px 0px rgba(0, 0, 0);
+  /* border-radius: 0.5rem; */
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  padding-inline: 0.5rem;
+  background-color: var(--color-tr8);
+  backdrop-filter: blur(5px);
+  /* margin-top: -2rem; */
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateY(-1rem);
+  transition: transform 0.5s ease;
+}
+
+.service-desc {
+  text-align: center;
+  background-color: rgba(185, 185, 185, 0.432);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateY(-1rem);
+  /* min-height: 2rem;*/
+  padding-bottom: calc(var(--h) - 4rem);
+  transition: transform 0.3s ease;
+  padding-inline: 0.8rem;
+  /* height: 1.2rem; */
+  white-space: nowrap;
+}
+
+.service-card:hover .service-desc {
+  /* height: auto; */
+  transition: transform 0.5s ease;
+  transform: translateY(-7rem);
+  white-space: normal;
+}
+
+.service-card:hover .service-title {
+  transform: translateY(-7rem);
+  transition: transform 0.3s ease;
+}
+
+.services-note {
+  margin-top: 2rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+footer {
+  margin-top: 2rem;
+}
