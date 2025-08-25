@@ -1,3 +1,61 @@
+
+/* Appointment Dialog Styles */
+
+#appointment-dialog {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+    padding: 0;
+    min-width: 320px;
+    max-width: 90vw;
+    background: linear-gradient(135deg, #23272a 80%, #111 100%);
+    color: #e0e0e0;
+    z-index: 1000;
+}
+
+#appointment-dialog::backdrop {
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(3px);
+}
+
+.dialog-content {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dialog-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #7fffd4;
+    text-shadow: 0 2px 8px #111;
+    text-align: center;
+}
+.dialog-message {
+    font-size: 1.1rem;
+    color: #bdbdbd;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 1px 4px #222;
+}
+#close-dialog {
+    background: var(--color);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(46,125,50,0.18);
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 0.5rem;
+}
+#close-dialog:hover {
+    background: linear-gradient(90deg, #1b5e20 80%, #23272a 100%);
+    box-shadow: 0 4px 16px rgba(46,125,50,0.28);
+}
 .skiptranslate {
     display: none !important;
 }
@@ -125,7 +183,7 @@
     width: 100%;
     /* transform: translateX(-50%); */
     display: flex;
-    transform: translateY(-2rem);
+    transform: translateY(-1rem);
     gap: 4px;
     vertical-align: middle;
     align-items: center;
@@ -134,20 +192,16 @@
     position: sticky;
     top: 100%;
 }
-
 .landing .call-to-action.move {
     position: fixed;
-    top: 0;
-    transform: translateY(4.5rem);
+    /* bottom: 0rem; */
+    top: 100dvh;
+    transform: translateY(-2rem);
     transition: transform 0.3s ease;
 }
 
-@media screen and (max-width: 720px) {
-    .landing .call-to-action.move {
-        justify-content: flex-end;
-        /* padding-right: 1rem; */
-    }
-}
+
+
 
 /* slide in animation */
 @keyframes slide-in {
@@ -161,11 +215,11 @@
     75% {
         opacity: 0.6;
         scale: 1 1.2;
-        transform: translateY(-0.8rem);
+        transform: translateY(-1.5rem);
     }
 
     100% {
-        transform: translateY(0rem);
+        transform: translateY(-1rem);
         opacity: 1;
         scale: 1;
     }
@@ -173,10 +227,11 @@
 
 .landing .call-to-action a,
 .landing .call-to-action button {
-    animation: slide-in 0.5s ease-out forwards;
+    animation: slide-in 0.5s  ease-out forwards;
     background-color: var(--color);
     color: var(--text-color);
     padding: 0.75rem 1.5rem;
+    padding-inline: clamp(0.5rem, 3vw, 1.5rem);
     border: none;
     border-radius: 0.5rem;
     font-size: 1rem;

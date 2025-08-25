@@ -69,12 +69,14 @@
             Our team of skilled technicians is equipped to handle every aspect of your vehicle's needs, from intricate
             mechanical repairs and advanced electrical diagnostics to meticulous bodywork and accident restoration. We
             understand that your car is more than just a mode of transport—it's an essential part of your daily life.
+            <br>
+            <br>
             That's why we are committed to providing top-quality service, utilizing state-of-the-art equipment to ensure
             your vehicle runs smoothly, safely, and looks its best. Whether it's a routine check-up, a complex repair,
             or a cosmetic enhancement, you can trust us to get the job done right, the first time.
         </p>
         <br>
-        
+
         <div class="call-to-action">
             <button>
                 Schedule Appointment
@@ -83,6 +85,13 @@
                 call
             </a>
         </div>
+        <dialog id="appointment-dialog">
+            <form method="dialog" class="dialog-content">
+                <h2 class="dialog-title">Schedule Appointment</h2>
+                <p class="dialog-message">We're sorry, online appointments aren't available right now. <br/> Please check back soon!</p>
+                <button id="close-dialog" type="submit">Close</button>
+            </form>
+        </dialog>
     </section>
     <section class="main-container">
         <!-- -------------------------- -->
@@ -279,7 +288,7 @@
             </div>
             </div>
     </footer>
-    <script src="/js/callto.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

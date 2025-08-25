@@ -23,7 +23,7 @@ section h1 {
     font-weight: bolder;
     color: var(--color);
     position: sticky;
-    top: 7rem;
+    top: 4rem;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.438);
     background-color: inherit;
