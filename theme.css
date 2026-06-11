@@ -1,11 +1,11 @@
 /* variables */
 :root {
-    --color: rgb(73, 161, 56);
-    --color-tr3: rgba(73, 161, 56, 0.3);
-    --color-tr8: rgba(73, 161, 56, 0.8);
-    --bg-color: #1a202c;
+    --color: rgb(139, 92, 246);
+    --color-tr3: rgba(139, 92, 246, 0.3);
+    --color-tr8: rgba(139, 92, 246, 0.8);
+    --bg-color: #0f0a1f;
     --text-color: #f7fafc;
-    --accent-color: #ed8936;
+    --accent-color: #f472b6;
 }
 
 body {

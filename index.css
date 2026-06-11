@@ -356,7 +356,8 @@ footer .f_garage {
 }
 
 .our-services h1 {
-    color: limegreen;
+    color: var(--color);
+    
 }
 
 .our-services>p {
