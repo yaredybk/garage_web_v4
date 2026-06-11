@@ -118,7 +118,7 @@
     min-height: calc(100dvh - 3rem);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     background-image: url('./assets/bg/bg-1.webp');
     background-size: cover;
     background-position: center;
